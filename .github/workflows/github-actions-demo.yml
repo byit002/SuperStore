@@ -40,7 +40,7 @@ jobs:
         run: |
            cd android 
            ls
-           sudo gradlew assembleDebug
+           sudo ./gradlew assembleDebug
 
       - name: Upload application
         uses: actions/upload-artifact@v2
