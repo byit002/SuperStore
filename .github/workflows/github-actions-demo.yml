@@ -32,10 +32,12 @@ jobs:
         uses: gradle/wrapper-validation-action@v1
 
       - name: List out directories
+        run: ls
+
+      - name: Build Android Artifact
         run: |
-          ls
-          
-      - name: Build and test
-        run: |
-          npm run build
           npm test
+          npx react-native run-android --variant=release
+
+      - name: Archive Android Build
+        run: cd android && ./gradlew assembleRelease
