@@ -26,7 +26,9 @@ jobs:
           cache: gradle
 
       - name: Install dependencies
-        run: npm install
+        run: |
+          npm i -g corepack
+          npm install
 
       - name: Validate gradle wrapper
         uses: gradle/wrapper-validation-action@v1
