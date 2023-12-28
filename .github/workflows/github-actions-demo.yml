@@ -3,7 +3,7 @@ name: Build Superstoreapp
 on:
   push:
     branches:
-      - master
+      - mystic
 
 jobs:
   build:
