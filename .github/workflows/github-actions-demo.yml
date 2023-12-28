@@ -37,7 +37,7 @@ jobs:
         run: ls
 
       - name: Archive Android Build
-        run: cd android && sudo ./gradlew assembleDebug
+        run: cd android && ./gradlew assembleDebug
 
       - name: Upload application
         uses: actions/upload-artifact@v2
