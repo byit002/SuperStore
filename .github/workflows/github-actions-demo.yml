@@ -34,6 +34,20 @@ jobs:
       - name: List out directories
         run: ls
 
+      - name: Set up Emulator
+        uses: reactivecircuits/setup-android-emulator@v2
+        with:
+          api-level: 30
+          target: default
+  
+      - name: Start Emulator
+        run: emulator -avd default -no-audio -no-window
+  
+      - name: Wait for Emulator to Start
+        run: |
+          adb wait-for-device
+          adb shell input keyevent 82
+
       - name: Build Android Artifact
         run: |
           npm test
