@@ -5,9 +5,11 @@
  * @format
  */
 
-import React from 'react';
+import React, { useEffect } from 'react';
+import SplashScreen from 'react-native-splash-screen';
 // import type {PropsWithChildren} from 'react';
 import {
+  Platform,
   SafeAreaView,
   // ScrollView,
   // StatusBar,
@@ -62,6 +64,13 @@ function App(): JSX.Element {
   // const backgroundStyle = {
   //   backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
   // };
+
+
+  useEffect(() => {
+    if (Platform.OS === 'android'){
+      SplashScreen.hide();
+    }
+  }, []);
 
   return (
     // <SafeAreaView style={backgroundStyle}>
