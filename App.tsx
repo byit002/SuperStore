@@ -5,7 +5,7 @@
  * @format
  */
 
-import React, { useEffect } from 'react';
+import React, {useEffect} from 'react';
 import SplashScreen from 'react-native-splash-screen';
 // import type {PropsWithChildren} from 'react';
 import {
@@ -65,9 +65,8 @@ function App(): JSX.Element {
   //   backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
   // };
 
-
   useEffect(() => {
-    if (Platform.OS === 'android'){
+    if (Platform.OS === 'android') {
       SplashScreen.hide();
     }
   }, []);
@@ -104,7 +103,7 @@ function App(): JSX.Element {
     //   </ScrollView>
     // </SafeAreaView>
     <SafeAreaView>
-      <FirstScreen/>
+      <FirstScreen />
     </SafeAreaView>
   );
 }
