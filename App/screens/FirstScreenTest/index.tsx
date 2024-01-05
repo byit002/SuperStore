@@ -1,9 +1,9 @@
 import React from 'react';
-import FirstComponent from '../../components/FirstComponent';
+import TabView from '../TabView';
 
 function index() {
   return (
-    <FirstComponent/>
+    <TabView/>
   );
 }
 
