@@ -1,13 +1,18 @@
 import * as React from 'react';
-import { View, useWindowDimensions } from 'react-native';
+import { Text, View, useWindowDimensions } from 'react-native';
 import { TabView, SceneMap } from 'react-native-tab-view';
 
+const viewStyle = { flex: 1, backgroundColor: '#ff4081' };
 const FirstRoute = () => (
-  <View style={{ flex: 1, backgroundColor: '#ff4081' }} />
+<View style={viewStyle} >
+<Text>Hello First</Text>
+</View>
 );
 
 const SecondRoute = () => (
-  <View style={{ flex: 1, backgroundColor: '#673ab7' }} />
+  <View style={{ flex: 1, backgroundColor: '#673ab7' }} >
+    <Text>Hello Second</Text>
+  </View>
 );
 
 const renderScene = SceneMap({
@@ -25,11 +30,13 @@ export default function TabViewExample() {
   ]);
 
   return (
+    <View style={{height: "100%"}}>
     <TabView
       navigationState={{ index, routes }}
       renderScene={renderScene}
       onIndexChange={setIndex}
       initialLayout={{ width: layout.width }}
     />
+    </View>
   );
 }

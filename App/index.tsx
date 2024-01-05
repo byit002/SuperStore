@@ -1,9 +1,8 @@
 import React from 'react';
-// import { View } from 'react-native';
-import FirstScreenTest from './screens/FirstScreenTest';
+import TabView from './screens/TabView';
 
 function index() {
-  return <FirstScreenTest/>;
+  return <TabView/>;
 }
 
 export default index;
