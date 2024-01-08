@@ -66,8 +66,10 @@ function App(): JSX.Element {
   // };
 
   useEffect(() => {
-    if (Platform.OS === 'android') {
-      SplashScreen.hide();
+    if (Platform.OS === 'android'){
+      setTimeout(() => {
+        SplashScreen.hide();
+      }, 1000);
     }
   }, []);
 
