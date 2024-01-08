@@ -27,7 +27,7 @@ import {
 //   ReloadInstructions,
 // } from 'react-native/Libraries/NewAppScreen';
 
-import FirstScreen from './App/screens/FirstScreenTest';
+import FirstScreen from './App';
 // type SectionProps = PropsWithChildren<{
 //   title: string;
 // }>;
