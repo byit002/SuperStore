@@ -27,7 +27,7 @@ import {
 //   ReloadInstructions,
 // } from 'react-native/Libraries/NewAppScreen';
 
-import FirstScreen from './App/screens/FirstScreenTest';
+import FirstScreen from './App';
 // type SectionProps = PropsWithChildren<{
 //   title: string;
 // }>;
@@ -66,8 +66,10 @@ function App(): JSX.Element {
   // };
 
   useEffect(() => {
-    if (Platform.OS === 'android') {
-      SplashScreen.hide();
+    if (Platform.OS === 'android'){
+      setTimeout(() => {
+        SplashScreen.hide();
+      }, 1000);
     }
   }, []);
 

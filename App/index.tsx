@@ -1,9 +1,11 @@
 import React from 'react';
-// import { View } from 'react-native';
-import FirstScreenTest from './screens/FirstScreenTest';
+import TabView from './screens/TabView';
+import { View } from 'react-native';
 
 function index() {
-  return <FirstScreenTest/>;
+  return <View>
+    <TabView/>
+    </View>;
 }
 
 export default index;
