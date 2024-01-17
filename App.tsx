@@ -27,7 +27,7 @@ import {
 //   ReloadInstructions,
 // } from 'react-native/Libraries/NewAppScreen';
 
-import FirstScreen from './App';
+import FirstScreen from '../SuperStore/App/screens/TabView';
 // type SectionProps = PropsWithChildren<{
 //   title: string;
 // }>;
@@ -67,18 +67,11 @@ function App(): JSX.Element {
 
   useEffect(() => {
     if (Platform.OS === 'android'){
-      setTimeout(() => {
         SplashScreen.hide();
-      }, 1000);
     }
     console.log('App mounted');
   }, []);
-    // if (Platform.OS === 'android'){
-    //   setTimeout(() => {
-    //     SplashScreen.hide();
-    //   }, 1000);
-    // }
-  console.log('mounting mounted');
+
   return (
     // <SafeAreaView style={backgroundStyle}>
     //   <StatusBar
