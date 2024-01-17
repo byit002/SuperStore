@@ -71,8 +71,14 @@ function App(): JSX.Element {
         SplashScreen.hide();
       }, 1000);
     }
+    console.log('App mounted');
   }, []);
-
+    // if (Platform.OS === 'android'){
+    //   setTimeout(() => {
+    //     SplashScreen.hide();
+    //   }, 1000);
+    // }
+  console.log('mounting mounted');
   return (
     // <SafeAreaView style={backgroundStyle}>
     //   <StatusBar
